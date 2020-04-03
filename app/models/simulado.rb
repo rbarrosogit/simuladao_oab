@@ -1,0 +1,2 @@
+class Simulado < ApplicationRecord
+end

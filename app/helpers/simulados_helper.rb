@@ -1,0 +1,2 @@
+module SimuladosHelper
+end
