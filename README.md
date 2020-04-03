@@ -2,7 +2,7 @@
 
 O Simuladão OAB é um site cujo o foco é reunir uma vasta gama de exercícios visando a melhor preparação possível para o candidato a prova da Ordem dos Advogados do Brasil.
 
-![](teste)
+![](/logo.png)
 
 ## Ferramentas utilizadas
 * Ruby 2.7.1
