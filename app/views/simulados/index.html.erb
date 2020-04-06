@@ -1,33 +1,62 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h1>Simulados</h1>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subject</th>
-      <th>Description</th>
-      <th>Question</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <link rel="stylesheet" href="style/css/style.css">
 
-  <tbody>
-    <% @simulados.each do |simulado| %>
-      <tr>
-        <td><%= simulado.title %></td>
-        <td><%= simulado.subject %></td>
-        <td><%= simulado.description %></td>
-        <td><%= simulado.question %></td>
-        <td><%= link_to 'Show', simulado %></td>
-        <td><%= link_to 'Edit', edit_simulado_path(simulado) %></td>
-        <td><%= link_to 'Destroy', simulado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
 
-<br>
 
-<%= link_to 'New Simulado', new_simulado_path %>
+    <title>Simulados - Simuladão OAB</title>
+  </head>
+
+  <body>
+
+   <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+      <div class="container">
+
+        <a class="navbar-brand h1 mb-0" href="#"> Simuladão OAB </a>
+      
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSite">
+
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+               <a class="nav-link" href="#"> Início</a>
+            </li>            
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center my-5">
+          <h1 class="display-4"><i class="fas fa-gavel text-primary"></i></i> Simulados</h1>
+          <div class="row">
+            <div class="col-12 text-center my-5">
+              <% @simulados.each do |simulado| %>
+                <h1 class="my-5"><%= link_to simulado.title, simulado %></h1>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
