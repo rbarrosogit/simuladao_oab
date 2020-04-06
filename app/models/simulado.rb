@@ -1,2 +1,0 @@
-class Simulado < ApplicationRecord
-end
