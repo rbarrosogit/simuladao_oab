@@ -1,10 +1,9 @@
 class CreateSimulados < ActiveRecord::Migration[6.0]
   def change
     create_table :simulados do |t|
-      t.string :title, presence: true, unique: true
-      t.string :subject, presence: true
-      t.string :description, presence: true
-      t.text :question, presence: true
+      t.string :title, null: false, unique: true
+      t.string :subject, null: false
+      t.string :description, null: false
 
       t.timestamps
     end

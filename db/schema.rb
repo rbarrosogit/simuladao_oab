@@ -13,10 +13,9 @@
 ActiveRecord::Schema.define(version: 2020_04_07_184858) do
 
   create_table "simulados", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "title"
-    t.string "subject"
-    t.string "description"
-    t.text "question"
+    t.string "title", null: false
+    t.string "subject", null: false
+    t.string "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
