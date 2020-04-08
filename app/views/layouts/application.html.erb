@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimuladaoOab</title>
+    <title>Simuladao OAB</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand h1 mb-0" href="#"> Simuladão OAB </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSite">
+
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Simulados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cadastro</a>
+            </li>
+          
+          </ul>
+
+          <form class="form-inline">
+            <input class="form-control ml-2 mr-2" type="search" placeholder="Buscar simulados...">
+            <button class="btn btn-dark" type="submit">Ok</button>
+          </form>
+
+          <ul class="navbar-nav mr-4">
+            <li class="nav-item">
+              <a class="nav-link ml-2" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

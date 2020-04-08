@@ -1,597 +1,511 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="style/css/style.css">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-
-
-    <title>Site do Rodrigo em Bootstrap 4</title>
-  </head>
-  <body>
-
-   <!-- Navbar -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-
-      <div class="container">
-
-        <a class="navbar-brand h1 mb-0" href="#"> Simuladão OAB </a>
+<!-- Carousel -->
+<div id="carouselSite" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselSite" data-slide-to="1"></li>
+    <li data-target="#carouselSite" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active">
       
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSite">
-
-          <ul class="navbar-nav mr-auto">
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Simulados</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cadastro</a>
-            </li>
-            
-
-          </ul>
-
-
-          <form class="form-inline">
-            <input class="form-control ml-2 mr-2" type="search" placeholder="Buscar simulados...">
-            <button class="btn btn-dark" type="submit">Ok</button>
-          </form>
-
-          <ul class="navbar-nav mr-4">
-            <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Login</a>
-            </li>
-          </ul>
-
-
-        </div>
-
+      <%= image_tag("ampulheta-da-justica.jpg") %>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Simuladão OAB</h1>
+        <p class="lead">Os melhores simulados para a sua melhor preparação.</p>
       </div>
+    
+    </div>
+    
+    <div class="carousel-item">
+      <%= image_tag("justica-cega-dourada-segurando-ampulheta.jpg") %>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Simuladão OAB</h1>
+        <p class="lead">Os melhores simulados para a sua melhor preparação.</p>
+      </div>
+    
+    </div>
+    
+    <div class="carousel-item">
+      <%= image_tag("justica-preto-e-branca-segurando-ampulheta.jpg") %>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Simuladão OAB</h1>
+        <p class="lead">Os melhores simulados para a sua melhor preparação.</p>
+      </div>
+    
+    </div>
+  </div>
 
+  <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center my-5">
+      <h1 class="display-3"><i class="fas fa-gavel text-primary"></i> Simulados</h1>
+      <p>Aqui você pode ler mais sobre os conteúdos dos nossos simulados.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Scrollspy -->
+
+<div class="row mb-5">
+
+  <div class="col-sm-6 col-md-4 mb-3">
+    
+    <nav id="navbarVertical" class="navbar navbar-light bg-light">
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="#item1">Direito laboral</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ml-3" href="#item1-1">Direito</a>
+            <a class="nav-link ml-3" href="#item1-2">Direito</a>
+          </nav>
+          <a class="nav-link my-2" href="#item2">Direito do Trânsito</a>
+          <a class="nav-link my-2" href="#item3">Direito Constitucional</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ml-3" href="#item3-1">Civil</a>
+            <a class="nav-link ml-3" href="#item3-2">Idosos</a>
+          </nav>
+        </nav>
     </nav>
 
-    <!-- Carousel -->
-    
-    <div id="carouselSite" class="carousel slide" data-ride="carousel" data-interval="3000">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselSite" data-slide-to="1"></li>
-        <li data-target="#carouselSite" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        
-        <div class="carousel-item active">
-          
-          <!-- <img class="img-fluid d-block w-100" src="images/forza1.jpg" alt="Forza Horizon 4"> -->
-          <%= image_tag("ampulheta-da-justica.jpg") %>
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Simuladão OAB</h1>
-            <p class="lead">Os melhores simulados para a sua melhor preparação.</p>
-          </div>
-        
-        </div>
-        
-        <div class="carousel-item">
-          <%= image_tag("justica-cega-dourada-segurando-ampulheta.jpg") %>
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Simuladão OAB</h1>
-            <p class="lead">Os melhores simulados para a sua melhor preparação.</p>
-          </div>
-        
-        </div>
-        
-        <div class="carousel-item">
-          <%= image_tag("justica-preto-e-branca-segurando-ampulheta.jpg") %>
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Simuladão OAB</h1>
-            <p class="lead">Os melhores simulados para a sua melhor preparação.</p>
-          </div>
-        
-        </div>
-      </div>
+  </div>
 
-      <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        <span class="sr-only">Próximo</span>
-      </a>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center my-5">
-          <h1 class="display-3"><i class="fas fa-gavel text-primary"></i></i> Simulados</h1>
-          <p>Aqui você pode ler mais sobre os conteúdos dos nossos simulados.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scrollspy -->
-
-
-    <div class="row mb-5">
-
-      <div class="col-sm-6 col-md-4 mb-3">
-        
-        <nav id="navbarVertical" class="navbar navbar-light bg-light">
-            <nav class="nav nav-pills flex-column">
-              <a class="nav-link" href="#item1">Direito laboral</a>
-              <nav class="nav nav-pills flex-column">
-                <a class="nav-link ml-3" href="#item1-1">Direito</a>
-                <a class="nav-link ml-3" href="#item1-2">Direito</a>
-              </nav>
-              <a class="nav-link my-2" href="#item2">Direito do Trânsito</a>
-              <a class="nav-link my-2" href="#item3">Direito Constitucional</a>
-              <nav class="nav nav-pills flex-column">
-                <a class="nav-link ml-3" href="#item3-1">Civil</a>
-                <a class="nav-link ml-3" href="#item3-2">Idosos</a>
-              </nav>
-            </nav>
-        </nav>
-
-      </div>
-
-      <div class="col-sm-6 col-md-8">
-        <div data-spy="scroll" data-target="#navbarVertical" data-offset="0" class="scrollspySite">
-          
-          <h4 id="item1">Direito do Trabalho</h4>
-          <p>O Direito do Trabalho é a área do direito que se responsabiliza por garantir o direito de todos no âmbito laboral,
-          nessa área você pode conhecer sobre todos os direitos e deveres que você como trabalhador tem.</p>
-
-          <h5 id="item1-1">Direito do Consumidor</h5>
-          <p>O Direito do Consumidor é a área do direito que se responsabiliza por garantir o direito de todos na hora das compras,
-          nessa área você pode conhecer sobre todos os direitos e deveres que você como consumidor tem.</p>
-
-          <h5 id="item1-2">Direito do Trânsito</h5>
-          <p>O Direito do Trânsito é a área do direito que se responsabiliza por garantir o direito de todos no trânsito,
-          nessa área você pode conhecer sobre todos os direitos e deveres que você como motorista ou pedestre tem. </p>
-
-          <h4 id="item2">Direito Constitucional</h4>
-          <p>O Direito Constitucional é a área do direito que se responsabiliza por garantir o direito de todos perante a constituição do nosso país,
-          nessa área você pode conhecer sobre todos os direitos e deveres que você como cidadão tem.</p>
-          
-          <h4 id="item3">Direito Civil</h4>
-          <p>O Direito Civil é a área do direito que se responsabiliza por garantir o direito de todos em nossa sociedade,
-          nessa área você pode conhecer sobre todos os direitos e deveres que você como cidadão tem.</p>
-
-          <h5 id="item3-1">Direito dos Idosos</h5>
-          <p>O Direito do Idosos é a área do direito que se responsabiliza por garantir o direito de todos acima dos 60 anos,
-          nessa área você pode conhecer sobre todos os direitos e deveres que você como idoso tem.</p>
-
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Cards -->
-
-    <div class="row justify-content-sm-center">
+  <div class="col-sm-6 col-md-8">
+    <div data-spy="scroll" data-target="#navbarVertical" data-offset="0" class="scrollspySite">
       
-      <div class="col-sm-6 col-md-4">
+      <h4 id="item1">Direito do Trabalho</h4>
+      <p>O Direito do Trabalho é a área do direito que se responsabiliza por garantir o direito de todos no âmbito laboral,
+      nessa área você pode conhecer sobre todos os direitos e deveres que você como trabalhador tem.</p>
 
-        <div class="card mb-5">
-          <%= image_tag("martelo-e-ampulheta.jpg") %>
-          <div class="card-body">
-            <h4 class="card-title">Simulado 1 OAB</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Nível: Fácil</h6>
-            <p class="card-text">Nosso simulado para iniciantes.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Direito do Trabalho</li>
-            <li class="list-group-item">Direito do Trânsito</li>
-            <li class="list-group-item">Direito do Consumidor</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Abrir</a>
-            <a href="#" class="card-link">Saiba mais</a>
-          </div>
-          <div class="card-footer text-muted">
-            Simuladão OAB
-          </div>
+      <h5 id="item1-1">Direito do Consumidor</h5>
+      <p>O Direito do Consumidor é a área do direito que se responsabiliza por garantir o direito de todos na hora das compras,
+      nessa área você pode conhecer sobre todos os direitos e deveres que você como consumidor tem.</p>
 
-        </div>
+      <h5 id="item1-2">Direito do Trânsito</h5>
+      <p>O Direito do Trânsito é a área do direito que se responsabiliza por garantir o direito de todos no trânsito,
+      nessa área você pode conhecer sobre todos os direitos e deveres que você como motorista ou pedestre tem. </p>
 
-      </div>
+      <h4 id="item2">Direito Constitucional</h4>
+      <p>O Direito Constitucional é a área do direito que se responsabiliza por garantir o direito de todos perante a constituição do nosso país,
+      nessa área você pode conhecer sobre todos os direitos e deveres que você como cidadão tem.</p>
       
-      <div class="col-sm-6 col-md-4">
+      <h4 id="item3">Direito Civil</h4>
+      <p>O Direito Civil é a área do direito que se responsabiliza por garantir o direito de todos em nossa sociedade,
+      nessa área você pode conhecer sobre todos os direitos e deveres que você como cidadão tem.</p>
 
-        <div class="card mb-5">
-          <%= image_tag("o-homem-e-a-ampulheta.jpg") %>
-          <div class="card-body">
-            <h4 class="card-title">Simulado 2 OAB</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Nível: Médio</h6>
-            <p class="card-text">Nosso simulado para aqueles que querem um novo desafio.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Direito do Consumidor</li>
-            <li class="list-group-item">Direito do Trabalho</li>
-            <li class="list-group-item">Direito do Trânsito</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Abrir</a>
-            <a href="#" class="card-link">Saiba mais</a>
-          </div>
-          <div class="card-footer text-muted">
-            Simuladão OAB
-          </div>
+      <h5 id="item3-1">Direito dos Idosos</h5>
+      <p>O Direito do Idosos é a área do direito que se responsabiliza por garantir o direito de todos acima dos 60 anos,
+      nessa área você pode conhecer sobre todos os direitos e deveres que você como idoso tem.</p>
 
-        </div>
 
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Cards -->
+
+<div class="row justify-content-sm-center">
+  
+  <div class="col-sm-6 col-md-4">
+
+    <div class="card mb-5">
+      <%= image_tag("martelo-e-ampulheta.jpg") %>
+      <div class="card-body">
+        <h4 class="card-title">Simulado 1 OAB</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Nível: Fácil</h6>
+        <p class="card-text">Nosso simulado para iniciantes.</p>
       </div>
-
-      <div class="col-sm-6 col-md-4">
-
-        <div class="card mb-5">
-          <%= image_tag("martelo-e-ampulheta-dourada.jpg") %>
-          <div class="card-body">
-            <h4 class="card-title">Simulado 3 OAB</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Nível: Díficil</h6>
-            <p class="card-text">Nosso simulado feito para quem sabe tudo de Direito.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Direito Constitucional</li>
-            <li class="list-group-item">Direito Civil</li>
-            <li class="list-group-item">Direito dos Idosos</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal">Abrir</a>
-            <a href="#" class="card-link">Saiba mais</a>
-          </div>
-          <div class="card-footer text-muted">
-            Simuladão OAB
-          </div>
-
-        </div>
-
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Direito do Trabalho</li>
+        <li class="list-group-item">Direito do Trânsito</li>
+        <li class="list-group-item">Direito do Consumidor</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Abrir</a>
+        <a href="#" class="card-link">Saiba mais</a>
+      </div>
+      <div class="card-footer text-muted">
+        Simuladão OAB
       </div>
 
     </div>
 
-    <!-- Modal -->
+  </div>
+  
+  <div class="col-sm-6 col-md-4">
 
-    <div class="modal fade" id="siteModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+    <div class="card mb-5">
+      <%= image_tag("o-homem-e-a-ampulheta.jpg") %>
+      <div class="card-body">
+        <h4 class="card-title">Simulado 2 OAB</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Nível: Médio</h6>
+        <p class="card-text">Nosso simulado para aqueles que querem um novo desafio.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Direito do Consumidor</li>
+        <li class="list-group-item">Direito do Trabalho</li>
+        <li class="list-group-item">Direito do Trânsito</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Abrir</a>
+        <a href="#" class="card-link">Saiba mais</a>
+      </div>
+      <div class="card-footer text-muted">
+        Simuladão OAB
+      </div>
 
-          <div class="modal-header">
-            <h5 class="modal-title">Proin pulvinar mi rutrum</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+    </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-6">
-                  <h5>In ultrices</h5>
+  </div>
 
-                  <p>In ultrices in nibh eget lacinia. Fusce tristique efficitur quam, sit amet eleifend augue interdum in. 
-                    Maecenas a urna non sem commodo tincidunt. 
-                    Nullam et aliquam augue, sit amet convallis nibh. 
-                    Suspendisse potenti. Aenean dapibus ac nisl et vehicula. Pellentesque quis libero magna. 
-                    Sed nisl leo, mattis sed volutpat vitae, vehicula id dui. 
-                    Aliquam ornare aliquam tellus sit amet iaculis. 
-                    Vivamus erat turpis, condimentum vitae consectetur a, dictum nec ligula. 
-                    Suspendisse egestas ultrices quam nec mollis. Nulla dui neque, maximus sit amet facilisis eget, 
-                    euismod ut erat. Aliquam at lobortis nisl. 
-                    Nulla facilisi. Aliquam a mi nec justo lacinia scelerisque.</p>
-                </div>
+  <div class="col-sm-6 col-md-4">
 
-                <div class="col-6">
-                  <h5>In ultrices</h5>
-                  
-                  <p>In ultrices in nibh eget lacinia. Fusce tristique efficitur quam, sit amet eleifend augue interdum in. 
-                    Maecenas a urna non sem commodo tincidunt. 
-                    Nullam et aliquam augue, sit amet convallis nibh. 
-                    Suspendisse potenti. Aenean dapibus ac nisl et vehicula. Pellentesque quis libero magna. 
-                    Sed nisl leo, mattis sed volutpat vitae, vehicula id dui. 
-                    Aliquam ornare aliquam tellus sit amet iaculis. 
-                    Vivamus erat turpis, condimentum vitae consectetur a, dictum nec ligula. 
-                    Suspendisse egestas ultrices quam nec mollis. Nulla dui neque, maximus sit amet facilisis eget, 
-                    euismod ut erat. Aliquam at lobortis nisl. 
-                    Nulla facilisi. Aliquam a mi nec justo lacinia scelerisque.</p>
-                </div>
-              </div>
+    <div class="card mb-5">
+      <%= image_tag("martelo-e-ampulheta-dourada.jpg") %>
+      <div class="card-body">
+        <h4 class="card-title">Simulado 3 OAB</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Nível: Díficil</h6>
+        <p class="card-text">Nosso simulado feito para quem sabe tudo de Direito.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Direito Constitucional</li>
+        <li class="list-group-item">Direito Civil</li>
+        <li class="list-group-item">Direito dos Idosos</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal">Abrir</a>
+        <a href="#" class="card-link">Saiba mais</a>
+      </div>
+      <div class="card-footer text-muted">
+        Simuladão OAB
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="siteModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Proin pulvinar mi rutrum</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-6">
+              <h5>In ultrices</h5>
+
+              <p>In ultrices in nibh eget lacinia. Fusce tristique efficitur quam, sit amet eleifend augue interdum in. 
+                Maecenas a urna non sem commodo tincidunt. 
+                Nullam et aliquam augue, sit amet convallis nibh. 
+                Suspendisse potenti. Aenean dapibus ac nisl et vehicula. Pellentesque quis libero magna. 
+                Sed nisl leo, mattis sed volutpat vitae, vehicula id dui. 
+                Aliquam ornare aliquam tellus sit amet iaculis. 
+                Vivamus erat turpis, condimentum vitae consectetur a, dictum nec ligula. 
+                Suspendisse egestas ultrices quam nec mollis. Nulla dui neque, maximus sit amet facilisis eget, 
+                euismod ut erat. Aliquam at lobortis nisl. 
+                Nulla facilisi. Aliquam a mi nec justo lacinia scelerisque.</p>
             </div>
-          </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Jumbotron -->
-
-    <div class="jumbotron jumbotron-fluid">
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-12 text-center">
-
-            <h1 class="display-4"><i class="fab fa-youtube text-danger"></i> Vídeos</h1>
-            <p class="lead">Assista aqui vídeos sobre curiosidades do direito que talvez você não saiba e possam te ajudar no seu dia-a-dia.</p>
-            <hr>
-
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="col-12">
-            <ul class="nav nav-pills justify-content-center mb-4" id="pills-nav" role="tablist">
-
-              <li class="nav-item">
-                <a class="nav-link active" id="nav-pills-01" data-toggle="pill" href="#nav-item-01">Direito do Consumidor</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">Direito do Pedestre</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" id="nav-pills-03" data-toggle="pill" href="#nav-item-03">Direito do Trabalhador</a>
-              </li>
-
-            </ul>
-
-            <div class="tab-content" id="nav-pills-content">
-              <div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
-               
-                <div class="row">
-                  <div class="col-sm-6">
-
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3VCF7W_-aJ4"></iframe>"
-                    </div>
-
-                  </div>
-
-                  <div class="col-sm-6">
-
-                    <p class="lead">Direito do Consumidor</p>
-
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
-               
-                <div class="row">
-                  <div class="col-sm-6">
-
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZOvk8N6Le_I"></iframe>
-                    </div>
-
-                  </div>
-
-                  <div class="col-sm-6">
-
-                    <p class="lead">Direito do Pedestre</p>
-
-                  </div>
-                </div>
-
-                
-              </div>
-
-              <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
-               
-                <div class="row">
-                  <div class="col-sm-6">
-
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/119PYtTREq8"></iframe>
-                    </div>
-
-                  </div>
-
-                  <div class="col-sm-6">
-
-                    <p class="lead">Direito do Trabalhador</p>
-
-                  </div>
-                </div>
-
-                
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-12 text-center my-5">
-
-          <h1 class="display-4"><i class="fa fa-paper-plane text-primary"></i> Formulário</h1>
-
-        </div>
-
-      </div>
-
-      <div class="row justify-content-center mb-5">
-        <div class="col-sm-12 col-md-10 col-lg-8">
-
-          <form>
-
-            <div class="form-row">
+            <div class="col-6">
+              <h5>In ultrices</h5>
               
-              <div class="form-group col-sm-6">
-
-                <label for="inputNome">Seu nome</label>
-                <input type="text" class="form-control" id="inputNome" placeholder="Nome">
-
-              </div>
-
-              <div class="form-group col-sm-6">
-
-                <label for="inputSobrenome">Seu sobrenome</label>
-                <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-
-              </div>
-
+              <p>In ultrices in nibh eget lacinia. Fusce tristique efficitur quam, sit amet eleifend augue interdum in. 
+                Maecenas a urna non sem commodo tincidunt. 
+                Nullam et aliquam augue, sit amet convallis nibh. 
+                Suspendisse potenti. Aenean dapibus ac nisl et vehicula. Pellentesque quis libero magna. 
+                Sed nisl leo, mattis sed volutpat vitae, vehicula id dui. 
+                Aliquam ornare aliquam tellus sit amet iaculis. 
+                Vivamus erat turpis, condimentum vitae consectetur a, dictum nec ligula. 
+                Suspendisse egestas ultrices quam nec mollis. Nulla dui neque, maximus sit amet facilisis eget, 
+                euismod ut erat. Aliquam at lobortis nisl. 
+                Nulla facilisi. Aliquam a mi nec justo lacinia scelerisque.</p>
             </div>
-            <div class="form-row"></div>
+          </div>
+        </div>
+      </div>
 
-              <div class="form-group col-sm-12">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
 
-                <label for="inputEnd">Seu endereço</label>
-                <input type="text" class="form-control" id="inputEnd" placeholder="Endereço">
+    </div>
+  </div>
+</div>
 
-              </div>
-            </div>
-            <div class="form-row"></div>
+<!-- Jumbotron -->
 
-              <div class="form-group col-sm-6">
+<div class="jumbotron jumbotron-fluid">
 
-                <label for="inputCidade">Sua cidade</label>
-                <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+  <div class="container">
 
-              </div>
+    <div class="row">
 
-              <div class="form-group col-sm-4">
+      <div class="col-12 text-center">
 
-                <label for="inputEstado">Seu estado</label>
-                <select id="inputEstado" class="form-control">
-                  <option selected>Escolha seu estado</option>
-                  <option selected>...</option>
-                  <option selected>...</option>
-                  <option selected>...</option>
-                </select>
-              </div>
+        <h1 class="display-4"><i class="fab fa-youtube text-danger"></i> Vídeos</h1>
+        <p class="lead">Assista aqui vídeos sobre curiosidades do direito que talvez você não saiba e possam te ajudar no seu dia-a-dia.</p>
+        <hr>
 
-              <div class="form-group col-sm-2">
+      </div>
 
-                <label for="inputCEP">Seu CEP</label>
-                <input type="text" class="form-control" id="inputCEP" placeholder="CEP">
+    </div>
 
-              </div>
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav nav-pills justify-content-center mb-4" id="pills-nav" role="tablist">
 
-            </div>
+          <li class="nav-item">
+            <a class="nav-link active" id="nav-pills-01" data-toggle="pill" href="#nav-item-01">Direito do Consumidor</a>
+          </li>
 
-            <div class="form-row">
+          <li class="nav-item">
+            <a class="nav-link" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">Direito do Pedestre</a>
+          </li>
 
-              <div class="form-group col-sm-12">
+          <li class="nav-item">
+            <a class="nav-link" id="nav-pills-03" data-toggle="pill" href="#nav-item-03">Direito do Trabalhador</a>
+          </li>
 
-                <div class="form-check">
+        </ul>
 
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox"> Desejo receber novidades via email
-                  </label>
+        <div class="tab-content" id="nav-pills-content">
+          <div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
+          
+            <div class="row">
+              <div class="col-sm-6">
 
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3VCF7W_-aJ4"></iframe>"
                 </div>
 
               </div>
 
+              <div class="col-sm-6">
+
+                <p class="lead">Direito do Consumidor</p>
+
+              </div>
             </div>
 
-            <div class="form-row">
+          </div>
 
-              <div class="col-sm-12">
+          <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
+          
+            <div class="row">
+              <div class="col-sm-6">
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
-                
-                <a tabindex="0" class="btn btn-secondary ml-2" role="button" data-toggle="popover" 
-                data-placement="right" data-trigger="focus" title="Fusce tristique" 
-                data-content="Proin sit amet dolor dapibus, tincidunt sapien a, varius purus. Nam auctor vel risus eget convallis.">Ajuda</a>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZOvk8N6Le_I"></iframe>
+                </div>
+
               </div>
 
-            </div>
-            
+              <div class="col-sm-6">
 
-          </form>
+                <p class="lead">Direito do Pedestre</p>
+
+              </div>
+            </div>
+
+            
+          </div>
+
+          <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
+          
+            <div class="row">
+              <div class="col-sm-6">
+
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/119PYtTREq8"></iframe>
+                </div>
+
+              </div>
+
+              <div class="col-sm-6">
+
+                <p class="lead">Direito do Trabalhador</p>
+
+              </div>
+            </div>
+
+            
+          </div>
 
         </div>
-
       </div>
 
-      <div class="row justify-content-md-center">
+    </div>
 
-        <div class="col-12 mb-3"><hr></div>
+  </div>
 
-        <div class="col-sm-4">
+</div>
 
-          <h3>Simuladão OAB</h3>
-          <p>O Simuladão OAB é um site focado em ajudar você, que está buscando a tão sonhada aprovação no exame da Ordem de Advogados do Brasil.
-            Sempre conte com os nossos simulados para lhe ajudar em seu estudo.</p> 
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-12 text-center my-5">
+
+      <h1 class="display-4"><i class="fa fa-paper-plane text-primary"></i> Formulário</h1>
+
+    </div>
+
+  </div>
+
+  <div class="row justify-content-center mb-5">
+    <div class="col-sm-12 col-md-10 col-lg-8">
+
+      <form>
+
+        <div class="form-row">
+          
+          <div class="form-group col-sm-6">
+
+            <label for="inputNome">Seu nome</label>
+            <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+
+          </div>
+
+          <div class="form-group col-sm-6">
+
+            <label for="inputSobrenome">Seu sobrenome</label>
+            <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+
+          </div>
 
         </div>
+        <div class="form-row"></div>
 
-        <div class="col-sm-4 align-content-center">
+          <div class="form-group col-sm-12">
 
-          <h3>Nossas redes sociais</h3>
-          <div class="btn-group-vertical btn-block btn-group-lg" role="group">
-
-            <a class="btn btn-outline-primary" href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-            <a class="btn btn-outline-warning" href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            <a class="btn btn-outline-info" href="#"><i class="fab fa-twitter"></i> Twitter</a>
-            <a class="btn btn-outline-success" href="#"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            <label for="inputEnd">Seu endereço</label>
+            <input type="text" class="form-control" id="inputEnd" placeholder="Endereço">
 
           </div>
         </div>
+        <div class="form-row"></div>
 
-        <div class="col-12 mt-5">
+          <div class="form-group col-sm-6">
 
-          <blockquote class="blockquote text-center">
+            <label for="inputCidade">Sua cidade</label>
+            <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
 
-            <p class="mb-0">Não existe um caminho para a felicidade. A felicidade é o caminho.</p>
-            <footer class="blockquote-footer">Thich Nhat Hanh <cite title="Título">Monge budista, pacifista, escritor e poeta vietnamita</cite></footer>
+          </div>
 
-          </blockquote>
+          <div class="form-group col-sm-4">
+
+            <label for="inputEstado">Seu estado</label>
+            <select id="inputEstado" class="form-control">
+              <option selected>Escolha seu estado</option>
+              <option selected>...</option>
+              <option selected>...</option>
+              <option selected>...</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-2">
+
+            <label for="inputCEP">Seu CEP</label>
+            <input type="text" class="form-control" id="inputCEP" placeholder="CEP">
+
+          </div>
 
         </div>
 
-      </div>
-      
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script>
+        <div class="form-row">
 
-      $(function () {
+          <div class="form-group col-sm-12">
+
+            <div class="form-check">
+
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Desejo receber novidades via email
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+          <div class="col-sm-12">
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            
+            <a tabindex="0" class="btn btn-secondary ml-2" role="button" data-toggle="popover" 
+            data-placement="right" data-trigger="focus" title="Fusce tristique" 
+            data-content="Proin sit amet dolor dapibus, tincidunt sapien a, varius purus. Nam auctor vel risus eget convallis.">Ajuda</a>
+          </div>
+
+        </div>
         
-        $('[data-toggle="popover"]').popover()
 
-      })
+      </form>
 
-    </script>
-  </body>
-</html>
+    </div>
+
+  </div>
+
+  <div class="row justify-content-md-center">
+
+    <div class="col-12 mb-3"><hr></div>
+
+    <div class="col-sm-4">
+
+      <h3>Simuladão OAB</h3>
+      <p>O Simuladão OAB é um site focado em ajudar você, que está buscando a tão sonhada aprovação no exame da Ordem de Advogados do Brasil.
+        Sempre conte com os nossos simulados para lhe ajudar em seu estudo.</p> 
+
+    </div>
+
+    <div class="col-sm-4 align-content-center">
+
+      <h3>Nossas redes sociais</h3>
+      <div class="btn-group-vertical btn-block btn-group-lg" role="group">
+
+        <a class="btn btn-outline-primary" href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a class="btn btn-outline-warning" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a class="btn btn-outline-info" href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a class="btn btn-outline-success" href="#"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+
+      </div>
+    </div>
+
+    <div class="col-12 mt-5">
+
+      <blockquote class="blockquote text-center">
+
+        <p class="mb-0">Não existe um caminho para a felicidade. A felicidade é o caminho.</p>
+        <footer class="blockquote-footer">Thich Nhat Hanh <cite title="Título">Monge budista, pacifista, escritor e poeta vietnamita</cite></footer>
+
+      </blockquote>
+
+    </div>
+
+  </div>
+  
+</div>
