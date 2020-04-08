@@ -7,8 +7,10 @@ class SimuladosController < ApplicationController
   def show
   end
 
+
   private
     def set_simulado
-      @simulado = Simulado.find(params[:id])
+      @simulado = Simulado.friendly.find(params[:id])
     end
+
 end
