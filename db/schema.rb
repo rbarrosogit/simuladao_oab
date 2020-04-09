@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_04_09_182346) do
-=======
-ActiveRecord::Schema.define(version: 2020_04_08_214615) do
->>>>>>> 3b306d098d2ed65a9f80e5c07d8bcc2e1d6a4bb1
+ActiveRecord::Schema.define(version: 2020_04_09_192746) do
 
   create_table "friendly_id_slugs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "slug", null: false
@@ -35,7 +31,6 @@ ActiveRecord::Schema.define(version: 2020_04_08_214615) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
     t.index ["slug"], name: "index_simulados_on_slug", unique: true
-<<<<<<< HEAD
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -46,10 +41,9 @@ ActiveRecord::Schema.define(version: 2020_04_08_214615) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-=======
->>>>>>> 3b306d098d2ed65a9f80e5c07d8bcc2e1d6a4bb1
   end
 
 end
