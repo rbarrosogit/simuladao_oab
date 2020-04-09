@@ -56,5 +56,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Font-Awesome gem
 gem 'font-awesome-sass'
 
+<<<<<<< HEAD
 # Devise gem
 gem 'devise'
+=======
+# Friendly_id gem
+gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
+>>>>>>> 3b306d098d2ed65a9f80e5c07d8bcc2e1d6a4bb1
