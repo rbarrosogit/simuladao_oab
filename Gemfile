@@ -61,3 +61,4 @@ gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
 
 # Devise gem
 gem 'devise'
+
