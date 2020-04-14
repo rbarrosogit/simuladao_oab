@@ -3,13 +3,13 @@
 		Login
 	</span>
   
-  <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+  <div class="wrap-input100 validate-input" data-validate = "Email é obrigatório">
     <%= f.email_field :email, class: "input100", type: "text", name: "email"  %>
     <span class="focus-input100"></span>
     <%= f.label :email, class: "label-input100" %>
   </div>
 
-  <div class="wrap-input100 validate-input" data-validate="Password is required">
+  <div class="wrap-input100 validate-input" data-validate= "Senha é obrigatória">
     <%= f.password_field :password, autocomplete: "current-password", class: "input100",  type: "password", name: "pass" %>
     <span class="focus-input100"></span>
     <%= f.label :password, class: "label-input100" %>
@@ -24,7 +24,7 @@
     <% end %>
 
       <div>
-				<%= link_to "Esqueceu sua senha?", class: "txt1" %>
+        <%= link_to("Esqueceu sua senha?", new_user_password_path, id:"forget-password", class: "txt1") %>
 			</div>
 
 	</div>
