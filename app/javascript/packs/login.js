@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( document ).on('turbolinks:load', function() {
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input100').each(function(){
