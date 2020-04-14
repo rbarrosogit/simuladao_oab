@@ -1,8 +1,4 @@
-
-(function ($) {
-    "use strict";
-
-
+$( document ).ready(function() {
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input100').each(function(){
@@ -13,10 +9,10 @@
             else {
                 $(this).removeClass('has-val');
             }
-        })    
+        })
     })
-  
-  
+
+
     /*==================================================================
     [ Validate ]*/
     var input = $('.validate-input .input100');
@@ -65,6 +61,6 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
 
-})(jQuery);
+
+})
