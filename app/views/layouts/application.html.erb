@@ -38,6 +38,11 @@
           <ul class="navbar-nav mr-4">
             <% if current_user %>
               <li class="nav-item">
+                <a href="#" class="nav-link ml-2">
+                  <%= "Olá " + current_user.first_name %>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link ml-2" %></a>
               </li>
             <% else %>
