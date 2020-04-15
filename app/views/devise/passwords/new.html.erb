@@ -1,0 +1,19 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "login100-form validate-form" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <span class="login100-form-title p-b-43">
+    Esqueceu sua senha?
+  </span><br>
+  <span class="login100-form-title p-b-43">
+    Insira seu email para redefinir sua senha.
+  </span>
+
+  <div class="wrap-input100 validate-input" data-validate = "Email é obrigatório">
+    <%= f.email_field :email, class: "input100" %>
+    <span class="focus-input100"></span>
+    <%= f.label :email, class: "label-input100" %>
+  </div>
+
+  <div class="container-login100-form-btn">
+    <%= f.submit "Enviar", class: "login100-form-btn" %>
+  </div>
+<% end %>

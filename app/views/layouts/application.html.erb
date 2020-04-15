@@ -14,7 +14,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
-        <a class="navbar-brand h1 mb-0" href="#"> Simuladão OAB </a>
+        <a><%= link_to "Simuladão OAB", root_path, class: "navbar-brand h1 mb-0" %></a>
           
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
             <span class="navbar-toggler-icon"></span>
@@ -23,15 +23,9 @@
         <div class="collapse navbar-collapse" id="navbarSite">
 
           <ul class="navbar-nav mr-auto">
-
+          
             <li class="nav-item">
-              <a class="nav-link" href="#">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Simulados</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cadastro</a>
+              <a><%= link_to "Simulados", simulados_path, class: "nav-link" %></a>
             </li>
           
           </ul>
@@ -42,13 +36,32 @@
           </form>
 
           <ul class="navbar-nav mr-4">
-            <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Login</a>
-            </li>
+            <% if current_user %>
+              <li class="nav-item">
+                <a href="#" class="nav-link ml-2">
+                  <%= "Olá " + current_user.first_name %>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link ml-2" %></a>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <a><%= link_to 'Cadastro', new_user_registration_path, class: "nav-link" %></a>
+              </li>
+              <li class="nav-item">
+                <a><%= link_to "Login", new_user_session_path, class: "nav-link ml-2" %></a>
+              </li>
+            <% end %>
           </ul>
+
         </div>
+        
       </div>
+      
     </nav>
     <%= yield %>
+    <%= render 'layouts/alerts' %>
+
   </body>
 </html>

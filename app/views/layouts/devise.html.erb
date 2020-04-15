@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simuladao OAB</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+  <body style="background-color: #666666;">
+	  <div class="limiter">
+		  <div class="container-login100">
+			  <div class="wrap-login100">
+
+          <%= yield %> 
+
+			    <div class="login100-more" style="background-image: url('<%= image_path("bg-01.jpg") %>');">
+		      </div>
+        </div>
+		  </div>
+	  </div>
+  </body>
+</html>
+
