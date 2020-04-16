@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_15_212443) do
+ActiveRecord::Schema.define(version: 2020_04_16_191302) do
 
   create_table "alternatives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "text", null: false
+    t.text "text", null: false
     t.string "letter", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "question_id"
+    t.index ["question_id"], name: "index_alternatives_on_question_id"
   end
 
   create_table "friendly_id_slugs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -31,12 +33,14 @@ ActiveRecord::Schema.define(version: 2020_04_15_212443) do
   end
 
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "question_number"
-    t.string "title"
-    t.string "enunciated"
-    t.string "correct_answer"
+    t.string "question_number", null: false
+    t.text "title", null: false
+    t.text "enunciated", null: false
+    t.string "correct_answer", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "topic_id"
+    t.index ["topic_id"], name: "index_questions_on_topic_id"
   end
 
   create_table "simulados", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -52,9 +56,11 @@ ActiveRecord::Schema.define(version: 2020_04_15_212443) do
   end
 
   create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "title"
+    t.text "title", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "simulado_id"
+    t.index ["simulado_id"], name: "index_topics_on_simulado_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -76,4 +82,7 @@ ActiveRecord::Schema.define(version: 2020_04_15_212443) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "alternatives", "questions"
+  add_foreign_key "questions", "topics"
+  add_foreign_key "topics", "simulados"
 end

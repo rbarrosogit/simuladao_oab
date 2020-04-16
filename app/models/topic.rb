@@ -1,3 +1,5 @@
 class Topic < ApplicationRecord
-  validate :title, presence: true
+  belongs_to :simulado
+  has_many :questions
+  validates :title, presence: true
 end
