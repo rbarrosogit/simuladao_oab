@@ -1,2 +1,0 @@
-class AlternativesController < ApplicationController
-end
