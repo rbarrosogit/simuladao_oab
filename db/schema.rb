@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_195629) do
+ActiveRecord::Schema.define(version: 2020_04_16_191302) do
+
+  create_table "alternatives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.text "text", null: false
+    t.string "letter", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "question_id"
+    t.index ["question_id"], name: "index_alternatives_on_question_id"
+  end
 
   create_table "friendly_id_slugs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "slug", null: false
@@ -23,14 +32,35 @@ ActiveRecord::Schema.define(version: 2020_04_14_195629) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "question_number", null: false
+    t.text "title", null: false
+    t.text "enunciated", null: false
+    t.string "correct_answer", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "topic_id"
+    t.index ["topic_id"], name: "index_questions_on_topic_id"
+  end
+
   create_table "simulados", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title", null: false
-    t.string "subject", null: false
-    t.string "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
+    t.string "numofquestions", null: false
+    t.string "year", null: false
+    t.string "subtitle", null: false
+    t.string "exambank", null: false
     t.index ["slug"], name: "index_simulados_on_slug", unique: true
+  end
+
+  create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.text "title", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "simulado_id"
+    t.index ["simulado_id"], name: "index_topics_on_simulado_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -52,4 +82,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_195629) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "alternatives", "questions"
+  add_foreign_key "questions", "topics"
+  add_foreign_key "topics", "simulados"
 end
