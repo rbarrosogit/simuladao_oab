@@ -3,7 +3,19 @@
     <div class="col-12 text-center my-5">
       <h1 class="display-5"><%= @simulado.title %></h1>
       <br>
-      <p class="lead my-4", style="font-size: 32px;">Questões</p>
+      <% @simulado.topics.each do |topic| %>
+        <p class="lead"><%= topic.title %></p>
+        <br>
+        <% topic.questions.each do |question| %>
+          <p><%= question.title %></p>
+          <p><%= question.enunciated %></p>
+          <br>
+          <% question.alternatives.each do |alternative| %>
+            <p><%= alternative.letter %>) <%= alternative.text %></p>
+            <br>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
