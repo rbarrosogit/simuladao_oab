@@ -7,6 +7,13 @@ class SimuladosController < ApplicationController
   def show
   end
 
+  def finish
+    p "============================================="
+    p "passou aqui"
+    p "============================================="
+    byebug
+  end
+
 
   private
     def set_simulado

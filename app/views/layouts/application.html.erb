@@ -35,7 +35,7 @@
             <button class="btn btn-dark" type="submit">Ok</button>
           </form>
 
-          <ul class="navbar-nav mr-4">
+          <ul class="navbar-nav ml-1">
             <% if current_user %>
               <li class="nav-item">
                 <a href="#" class="nav-link ml-2">
@@ -43,8 +43,16 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="#" class="nav-link ml-2">Meu perfil</a>
+              </li>
+              <li class="nav-item">
                 <a><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link ml-2" %></a>
               </li>
+              <% if current_user.admin %>
+                <li class="nav-item">
+                  <a><%= link_to 'Admin', rails_admin.dashboard_path, class: "nav-link" %></a>
+                </li>
+              <% end %>
             <% else %>
               <li class="nav-item">
                 <a><%= link_to 'Cadastro', new_user_registration_path, class: "nav-link" %></a>

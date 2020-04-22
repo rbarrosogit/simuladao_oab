@@ -8,4 +8,5 @@ class User < ApplicationRecord
   def first_name
     self.name.blank? ? "" : self.name.split(" ")[0]
   end
+
 end

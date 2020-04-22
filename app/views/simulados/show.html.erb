@@ -3,19 +3,28 @@
     <div class="col-12 text-center my-5">
       <h1 class="display-5"><%= @simulado.title %></h1>
       <br>
-      <% @simulado.topics.each do |topic| %>
-        <p class="lead"><%= topic.title %></p>
-        <br>
-        <% topic.questions.each do |question| %>
-          <p><%= question.title %></p>
-          <p><%= question.enunciated %></p>
+      <%= form_tag finish_simulado_path do %>
+        <% @simulado.topics.each do |topic| %>
+          <p class="lead"><%= topic.title %></p>
           <br>
-          <p class="lead"><% question.alternatives.each do |alternative| %>
-            <p><%= alternative.letter %>) <%= alternative.text %></p>
+          <% topic.questions.each do |question| %>
+            <p><%= question.title %></p>
+            <p><%= question.enunciated %></p>
             <br>
-          </p>
+              <% question.alternatives.each do |alternative| %>
+                <p><%= alternative.letter %>) <%= alternative.text %></p>
+                <br>
+              </p>
+              <% end %>
+              <div class="btn-group" data-toggle="buttons">
+                <%= radio_button_tag "question-#{question.id}", 'A' %>
+                <%= label_tag 'A', 'A', class:"btn btn-primary" %>
+                <%= radio_button_tag "question-#{question.id}", 'B', true %>
+                <%= label_tag 'A', 'B', class:"btn btn-primary" %>
+              </div>
           <% end %>
         <% end %>
+        <div><%= submit_tag 'Enviar Simulado' %></div>
       <% end %>
     </div>
   </div>
