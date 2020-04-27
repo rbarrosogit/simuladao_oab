@@ -68,8 +68,11 @@
       </div>
       
     </nav>
-    <%= yield %>
-    <%= render 'layouts/alerts' %>
 
+    <div class="container">
+      <%= render 'layouts/messages' %>
+    </div>
+
+    <%= yield %>
   </body>
 </html>

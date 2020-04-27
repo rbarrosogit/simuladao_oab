@@ -16,12 +16,10 @@
                 <br>
               </p>
               <% end %>
-              <div class="btn-group" data-toggle="buttons">
-                <%= radio_button_tag "question-#{question.id}", 'A' %>
-                <%= label_tag 'A', 'A', class:"btn btn-primary" %>
-                <%= radio_button_tag "question-#{question.id}", 'B', true %>
-                <%= label_tag 'A', 'B', class:"btn btn-primary" %>
-              </div>
+              <label class="radio-inline mr-3"><%= radio_button_tag "question-#{question.id}", 'a' %>A</label>
+              <label class="radio-inline mr-3"><%= radio_button_tag "question-#{question.id}", 'b' %>B</label>
+              <label class="radio-inline mr-3"><%= radio_button_tag "question-#{question.id}", 'c' %>C</label>
+              <label class="radio-inline mr-3"><%= radio_button_tag "question-#{question.id}", 'd' %>D</label>
           <% end %>
         <% end %>
         <div><%= submit_tag 'Enviar Simulado' %></div>

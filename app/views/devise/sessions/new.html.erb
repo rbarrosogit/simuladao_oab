@@ -1,3 +1,5 @@
+<%= devise_error_messages! %>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "login100-form validate-form" }) do |f| %>
   <span class="login100-form-title p-b-43">
 		Login
@@ -25,6 +27,9 @@
 
       <div>
         <%= link_to("Esqueceu sua senha?", new_user_password_path, id:"forget-password", class: "txt1") %>
+			</div>
+      <div>
+        <%= link_to("Não tem uma conta?", new_user_registration_path, id:"forget-password", class: "txt1") %>
 			</div>
 
 	</div>
