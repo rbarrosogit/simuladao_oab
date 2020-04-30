@@ -2,33 +2,46 @@
   <span class="login100-form-title p-b-43">
 		Cadastro
 	</span>
+  <%= render "layouts/messages" %>
+  <%= render "devise/shared/error_messages", resource: resource %>
   
-  <div class="wrap-input100 validate-input" data-validate= "Nome completo é obrigatório">
+  <div class="wrap-input100" data-validate= "Nome completo é obrigatório">
     <%= f.text_field :name, class: "input100" %>
     <span class="focus-input100"></span>
     <%= f.label :name, class: "label-input100" %>
   </div>
 
-  <div class="wrap-input100 validate-input" data-validate = "Email é obrigatório">
+  <div class="wrap-input100" data-validate = "Email é obrigatório">
     <%= f.email_field :email, class: "input100"  %>
     <span class="focus-input100"></span>
     <%= f.label :email, class: "label-input100" %>
   </div>
 
-  <div class="wrap-input100 validate-input" data-validate="Senha é obrigatória">
+  <div class="wrap-input100" data-validate="Senha é obrigatória">
     <%= f.password_field :password, autocomplete: "current-password", class: "input100" %>
     <span class="focus-input100"></span>  
     <%= f.label :password, class: "label-input100" %>
   </div>
 
-  <div class="wrap-input100 validate-input" data-validate="É necessário confirmar sua senha">
+  <div class="wrap-input100" data-validate="É necessário confirmar sua senha">
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input100" %>
     <span class="focus-input100"></span>  
     <%= f.label :password_confirmation, class: "label-input100" %>
   </div>
 
+  <div class="flex-sb-m w-full p-t-3 p-b-32">
+      <div>
+        <%= link_to("Já tem uma conta?", new_user_session_path, id:"login", class: "txt1") %>
+			</div>
+	</div>
+
   <div class="container-login100-form-btn">
     <%= f.submit "Criar sua conta", class: "login100-form-btn" %>
   </div>
 
+  <div class="container-login100-form-btn my-3">
+    <%= link_to "Voltar para home", root_path, class: "login100-form-btn" %>
+  </div>
+
 <% end %>
+

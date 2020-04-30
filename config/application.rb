@@ -18,5 +18,7 @@ module SimuladaoOab
 
     config.assets.enabled = true
     config.assets.paths << Rails.root.join('/app/assets/fonts/')
+
+    config.i18n.default_locale = :'pt-BR'
   end
 end

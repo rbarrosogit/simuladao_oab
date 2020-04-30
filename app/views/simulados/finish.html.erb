@@ -1,8 +1,36 @@
 <div class="col-12 text-center my-5" >
-  <h1>Parabéns! Você finalizou o nosso simulado.</h1>
+  <h1>Parabéns! Você finalizou o nosso simulado. <i class="fas fa-trophy text-warning"></i></h1>
   <br>
   <h3>Aqui estão seus resultados:</h3>
   <br>
   <p class="lead">Quantidade de acertos: <%= @cont %> acerto(s)</p>
+  <p class="lead">Quantidade de erros: <%= @cont_wrong %> erro(s)</p>
+  <table class="col-4 offset-4 table">
+    <thead>
+      <tr class="bg-primary text-white">
+        <th scope="col">Questão</th>
+        <th scope="col">Acertou</th>
+        <th scope="col">Errou</th>
+        <th scope="col">Gabarito</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @answers.each_slice(3) do |wrong, letter, mark| %>
+          <tr class="bg-secondary text-white">
+            <th scope="row"><%= wrong %></th>
+            <% if mark == 1 %>
+              <td><i class="fas fa-check text-success"></i></td>
+              <td>-</td>
+            <% else %>
+              <td>-</td>
+              <td><i class="fas fa-times text-danger"></i></p></td>
+            <% end %>
+            <td><%= letter %></td>
+          </tr>
+        <% end %>
+    </tbody>
+  </table>
+
+  </p>
   <p class="lead">Seu rendimento na prova foi de: <%= @percent %>% <br><%= @percent_message %></p>
 </div>

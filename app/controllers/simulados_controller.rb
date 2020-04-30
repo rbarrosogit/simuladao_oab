@@ -10,7 +10,9 @@ class SimuladosController < ApplicationController
   end
 
   def finish
+    @answers = []
     @cont = 0
+    @cont_wrong = 0
     params.each do |key, value|
       splited_key = key.split("-")
       if (splited_key.length == 2 and splited_key.first == "question")
@@ -18,6 +20,14 @@ class SimuladosController < ApplicationController
         question = Question.find(question_id)
         if value == question.correct_answer
           @cont += 1
+          @answers << question_id
+          @answers << question.correct_answer.upcase
+          @answers << 1
+        else
+          @cont_wrong += 1
+          @answers << question_id
+          @answers << question.correct_answer.upcase
+          @answers << 0
         end
       end  
     end
