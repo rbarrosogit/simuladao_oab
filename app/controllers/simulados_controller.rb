@@ -31,7 +31,7 @@ class SimuladosController < ApplicationController
         end
       end  
     end
-    @percent = ((@cont / 5.0) * 100).to_i
+    @percent = ((@cont / 80.0) * 100).to_i
     if @percent >= 50
       @percent_message = "Parabéns, você acertou mais da metade da prova."
       if @percent == 100
