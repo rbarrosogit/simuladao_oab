@@ -20,5 +20,11 @@ module SimuladaoOab
     config.assets.paths << Rails.root.join('/app/assets/fonts/')
 
     config.i18n.default_locale = :'pt-BR'
+
+    Time::DATE_FORMATS[:default] = "%d/%m/%Y %H:%M"
+    Date::DATE_FORMATS[:default] = "%d/%m/%Y"
+
+    config.time_zone = 'Brasilia'
+    config.active_record.default_timezone = :local
   end
 end

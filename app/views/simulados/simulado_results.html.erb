@@ -1,11 +1,4 @@
-<div class="col-12 text-center my-5" >
-  <h1>Parabéns! Você finalizou o nosso simulado. <i class="fas fa-trophy text-warning"></i></h1>
-  <br>
-  <h3>Aqui estão seus resultados:</h3>
-  <br>
-  <p class="lead">Quantidade de acertos: <%= @count_right %> acerto(s)</p>
-  <p class="lead">Quantidade de erros: <%= @count_wrong %> erro(s)</p>
-  <table class="col-4 offset-4 table">
+<table class="col-4 offset-4 table">
     <thead>
       <tr class="bg-primary text-white">
         <th scope="col">Questão</th>
@@ -30,9 +23,3 @@
         <% end %>
     </tbody>
   </table>
-          
-
-
-  </p>
-  <p class="lead">Seu rendimento na prova foi de: <%= @percent %>% <br><%= @percent_message %></p>
-</div>
