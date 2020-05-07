@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_16_191302) do
+ActiveRecord::Schema.define(version: 2020_05_06_181156) do
 
   create_table "alternatives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "text", null: false
@@ -37,10 +37,33 @@ ActiveRecord::Schema.define(version: 2020_04_16_191302) do
     t.text "title", null: false
     t.text "enunciated", null: false
     t.string "correct_answer", null: false
+    t.string "user_answer", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "topic_id"
     t.index ["topic_id"], name: "index_questions_on_topic_id"
+  end
+
+  create_table "resolved_questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "question_id"
+    t.bigint "resolved_simulado_id"
+    t.string "mark"
+    t.boolean "correct"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_resolved_questions_on_question_id"
+    t.index ["resolved_simulado_id"], name: "index_resolved_questions_on_resolved_simulado_id"
+    t.index ["user_id"], name: "index_resolved_questions_on_user_id"
+  end
+
+  create_table "resolved_simulados", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "simulado_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["simulado_id"], name: "index_resolved_simulados_on_simulado_id"
+    t.index ["user_id"], name: "index_resolved_simulados_on_user_id"
   end
 
   create_table "simulados", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -53,6 +76,13 @@ ActiveRecord::Schema.define(version: 2020_04_16_191302) do
     t.string "subtitle", null: false
     t.string "exambank", null: false
     t.index ["slug"], name: "index_simulados_on_slug", unique: true
+  end
+
+  create_table "simulados_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "simulado_id"
+    t.bigint "user_id"
+    t.index ["simulado_id"], name: "index_simulados_users_on_simulado_id"
+    t.index ["user_id"], name: "index_simulados_users_on_user_id"
   end
 
   create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|

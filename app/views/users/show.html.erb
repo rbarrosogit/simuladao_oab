@@ -3,4 +3,9 @@
   <div>
     <p class="lead"><%= link_to("Trocar meu nome", edit_name_path, id:"change-username", class: "txt1") %></p>
 	</div>
+  <h1 class="display-5">Simulados concluídos:</h1>
+  <% current_user.resolved_simulados.each do |finish| %>
+    <%= link_to finish.simulado.title, simulado_results_path(finish.id) %>, resolvido em <%= finish.created_at%>
+    <br>
+  <% end %>
 </div>

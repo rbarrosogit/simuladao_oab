@@ -64,3 +64,6 @@ gem 'devise'
 
 # Rails admin gem
 gem 'rails_admin'
+
+# Rails i18n
+gem 'rails-i18n'
